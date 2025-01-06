@@ -1,0 +1,132 @@
+@font-face{
+    font-family: "Winter";
+    src: url("winter.ttf") format('truetype')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body {
+    margin:0;
+    background: radial-gradient(#C0C4F1, #5F5F9A);
+}
+
+.page-title {
+    color:rgb(19, 19, 93);
+    font-family: "Winter";
+    font-size: 70px;
+    text-align: center;
+}
+
+.game-info-container {
+    grid-column: 1/-1;
+    display: flex; /* lays items out in a row */
+    justify-content: space-between;
+}
+
+.game-info{
+    color:rgb(57, 57, 140);
+    font-family: "Winter";
+    font-size: 35px;
+}
+
+.game-container{
+    display: grid; /*when using display: grid, the child elements (.card) are automatically arranged in a grid format */
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px; /* Sets the gap between rows and columns in the grid */
+    margin: 40px auto; /* Centers the grid; 40px margin at the top and bottom; auto horizontally centers .game-container */
+    width: 80%; /* Constrains the grid width */
+    justify-content: center; /* Centers the cards */
+}
+
+.card{
+    position: relative;
+    height: 175px;
+    width: 125px;
+}
+
+.card.matched .album{ /* the 'matched' will be used in the JS file */
+    font-size: 35px; /* delte this, its filler */
+}
+
+.card-face{
+    position: absolute;
+    background-color: rgb(79, 79, 161); 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden; /* anything facing the back of us (the face of the card) should act as if its not there */
+    border-radius: 10px; /* rounds corners */
+    border: 3px solid #d0d3f2; /* adds border */
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back{       /* the 'visible' will be used in the JS file */
+    transform: rotateY(-180deg)
+}
+.card.visible .card-front{      /* the 'visible' will be used in the JS file */
+    transform: rotateY(0)
+}
+
+.card-front{
+    transform: rotateY(180deg); /* flip card front 180 deg so that we are looking at the back */
+}
+
+.music-back{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out; /* doesn't do anything rn. to finish, go to 17:00 in YT vid */
+}
+.album{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+.card-back:hover .music-back{
+    width: 220px;
+    height: 220px;
+}
+
+.overlay-text{
+    display: none; /*dont want the text to show unless we have the 'visible' class on it*/
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: rgb(79, 79, 161);
+    font-family: "Winter";
+}
+
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column; /* stacks text on top of eachother */
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow{
+    from{
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    } to {
+        background-color: rgba(0,0,0,0.8);
+        font-size: 8em;
+    }
+}
+
+.overlay-text-small{
+    font-size: .3em;
+}

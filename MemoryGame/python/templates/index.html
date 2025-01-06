@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link href="../static/styles/styles.css" rel="stylesheet">
+    <script src="../static/scripts/game.js" async></script>
+</head>
+<body>
+    
+    <h1 class="page-title">Memory Card Game</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>  
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>  
+    <div id="victory-text" class="overlay-text">
+        YOU WON!
+        <span class="overlay-text-small">Click to Restart</span>
+    </div> 
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="time-remaining">50</span>
+            </div>
+            <div class="game-info">
+                Flips: <span id="num-flips">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb1}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb1}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb2}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb2}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb3}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb3}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb4}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb4}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb5}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb5}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb6}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb6}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb7}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb7}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb8}}"> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="music-back" src="../static/styles/images/card-back.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="album" src="{{album_details.alb8}}"> 
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
