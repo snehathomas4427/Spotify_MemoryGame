@@ -40,9 +40,3 @@ class API:
         
         #album_details = AlbumDetails(random_urls)
         
-        
-'''def main():
-    api = API()
-    api.album_data('https://open.spotify.com/playlist/3SL6z8bN3TiXzm1e3uDp6E')
-
-main()'''
